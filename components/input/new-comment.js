@@ -1,6 +1,5 @@
 import { useRef, useState } from 'react';
 import classes from './new-comment.module.css';
-
 function NewComment(props) {
   const [isInvalid, setIsInvalid] = useState(false);
 
@@ -36,7 +35,7 @@ function NewComment(props) {
   }
 
   return (
-    <form className={classes.form}>
+    <form className={classes.form} onSubmit={sendCommentHandler}>
       <div className={classes.row}>
         <div className={classes.control}>
           <label htmlFor='email'>Your email</label>
