@@ -10,10 +10,10 @@ function CommentList() {
 
   return (
     <ul className={classes.comments}>
-      {comments.map((comment, index) => <div key={`comment-${index}`}><li>
-        <p>{comment.text}</p>
+      {comments?.map((elem, index) => <div key={`comment-${index}`}><li>
+        <p>{elem.comment.text}</p>
         <div>
-          By <address>{comment.email}</address>
+          By <address>{elem.comment.email}</address>
         </div>
       </li>
       </div>)}
